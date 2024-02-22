@@ -1,0 +1,3 @@
+ffmpeg -i bj_full.mp4 ./img/frame_%d.jpg
+ls ./img/*.jpg | shuf -n 100 > datasets.txt
+xargs -a datasets.txt -I {} mv {} imag2/
